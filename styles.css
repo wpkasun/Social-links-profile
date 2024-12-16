@@ -1,0 +1,132 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  --green: #c4f82a;
+  --white: #ffffff;
+  --grey700: #333333;
+  --grey800: #1f1f1f;
+  --grey900: #141414;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--grey900);
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+}
+
+img {
+  border-radius: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+  border-radius: 12px;
+  margin: 24px;
+  padding: 24px;
+  width: 327px;
+  min-width: 240px;
+  background-color: var(--grey800);
+}
+
+/* Tablet */
+@media (min-width: 540px) and (max-width: 1024px) {
+  .card {
+    width: 456px;
+    padding: 40px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .card {
+    width: 384px;
+    padding: 40px;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.name-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  width: 100%;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding-block: 14px;
+  background-color: var(--grey700);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--green);
+  color: var(--grey900);
+}
+
+button:active {
+  background-color: var(--white);
+}
